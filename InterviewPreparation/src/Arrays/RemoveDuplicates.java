@@ -21,9 +21,21 @@ public class RemoveDuplicates {
 		// ArrayIndexOutOfBound Exception.
 		arr[j++] = arr[arr.length - 1];
 
-		// run through j index
+		// run upto j index
 		for (int i = 0; i < j; i++) {
 			System.out.print(arr[i] + " ");
+		}
+
+		String names[] = { "Raja", "Max", "Max", "Jack", "Mahesh","Max" };
+		int k = 0;
+		for (int i = 0; i < names.length - 1; i++) {
+			if (!names[i].equalsIgnoreCase(names[i + 1]))
+				names[k++] = names[i];
+
+		}
+		// run up to k index
+		for (int i = 0; i < k; i++) {
+			System.out.print(names[i] + " ");
 		}
 
 	}
